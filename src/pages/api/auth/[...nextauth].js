@@ -10,5 +10,6 @@ export const authOptions = {
     }),
     // ...add more providers here
   ],
+  secret: '58510f5b4f47dbc669c693e97b4bb0b0',
 }
 export default NextAuth(authOptions);
