@@ -5,6 +5,7 @@ import { signIn, signOut, useSession } from 'next-auth/react';
 import { useRouter } from 'next/router';
 import { useSelector } from 'react-redux';
 import { selectItems } from '../slices/basketSlice';
+import amazonLogo from '../images/amazon_logo.png';
 
 function Header() {
     const {data: session} = useSession();
@@ -17,10 +18,9 @@ function Header() {
             <div className='mt-2 flex items-center flex-grow sm:flex-grow-0'>
                 <Image 
                     onClick={() => router.push('/')}
-                    src='https:links.papareact.com/f90' 
-                    width={150} height={40} 
-                    objectFit='contain' 
-                    className='cursor-pointer'
+                    src={amazonLogo} 
+                    width={120} height={40}
+                    className='cursor-pointer p-1'
                 />
             </div>
             <div className='hidden sm:flex items-center h-10 rounded-md flex-grow cursor-pointer bg-yellow-400 hover:bg-yellow-500'>
